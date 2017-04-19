@@ -1,0 +1,22 @@
+\subsection{\textit{SAFESPOT}}
+In 2006 a project running for 4 years called SAFESPOT\footnotemark was co-funded by the European Commission Information Society and Media, and had as objective to improve road safety. One of the key elements was to have vehicles exchange data between them and with infrastructure (V2V and V2I) to advice or warn the driver of upcoming situation happening.\par
+% 
+\footnotetext{\url{http://www.safespot-eu.org/}, accessed 10/04/2017}
+% 
+\subsubsection{Architecture}
+SAFESPOT is composed of nodes, that communicates with each other through short range wireless communication called VANET (Vehicle Ad-hoc NETwork) using IEEE 802.11p as physical layer (reference to technology). A node can be in a vehicle or on an infrastructure such as a traffic light. All nodes create data through their sensors or through data from other nodes and are then collected in a multi-layered Database named Local Dynamic Map (LDM).
+LDM consist of 4 layers. From bottom up, the first is the static map like google maps. The second is Landmarks, such as road signs, trees, buildings etc. The third is temporary objects that can change from day to day, such as road work. And lastly Dynamic object which is immediate status, such as congestion, current traffic light colour etc. \cite{Brignolo2008UseProject}.
+To locate the position of the vehicles, SAFESPOT uses the road data from GPS, road landmark recognition and dead reckoning\footnotemark.\par
+%
+% 
+\footnotetext{\enquote{In navigation, dead reckoning or dead-reckoning is the process of calculating one's current position by using a previously determined position, or fix, and advancing that position based upon known or estimated speeds over elapsed time and course.}, source: \url{https://en.wikipedia.org/wiki/Dead_reckoning}}
+% 
+% 
+The data rate and communication channel usage is restricted and is one of the physical bottle neck in the system. US WAVE 802.11.p (which is similar to SAFESPOT) has a data rate of:
+\begin{itemize}
+    \item Remote On Board Unit (vehicle): 2320 bit/s
+    \item Remote Road Side Unit (traffic light): 22500 bit/s  
+\end{itemize}
+Though the numbers might be slightly different in Europe, it still shows the bottleneck that exists in this kind of communication channel, especially for On Board Units.\par
+% 
+Depending on how advanced we want the platooning to be, will lessen the amount of data and how accurate it needs to be. Since SAFESPOT main objective was safety, they needed as many details as possible, to make sure that the driver was given the correct information to avoid a incoming crash. If we want to make platooning only available on highways and only the speed and the brake being controlled, the amount of information needed to be sent to the “VANET” is severely lessened, but if everything were to be automatized, at least as much data as SAFESPOT is needed. The restriction of the data rate is something to take into consideration as well. 

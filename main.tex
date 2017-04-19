@@ -3,7 +3,15 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[left=2.54cm,top=3cm,right=2.54cm,bottom=3cm]{geometry}
+\usepackage[]{csquotes}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{upgreek}
 
+\graphicspath{ {images/} }
+
+\addbibresource{mendeley.bib}
 
 \title{P4 Report}
 \author{fadami15 }
@@ -18,24 +26,26 @@
 
 % /To be changed later on/
 
+% \pagebreak
+
+% \include{introduction}
+% \pagebreak
+
+% \include{problemForm}
+% \pagebreak
+
+% \include{methodology}
+% \pagebreak
+
+% \include{LiteratureReview/LRmain}
+% \pagebreak
+
+% \include{Interwviews}
+% \pagebreak
+
+\include{Technology/technology}
 \pagebreak
 
-\include{introduction}
-\pagebreak
-
-\include{problemForm}
-\pagebreak
-
-\include{methodology}
-\pagebreak
-
-\include{literatureReview}
-\pagebreak
-
-\include{Interviews}
-\pagebreak
-
-\include{technology}
-\pagebreak
+\printbibliography
 
 \end{document}

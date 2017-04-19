@@ -1,0 +1,19 @@
+\subsubsection{ARIB STD-T109}
+% 
+% Section about Japanese technology ARIB.
+% 
+% Some info: \url{http://www.arib.or.jp/english/html/overview/doc/5-STD-T109v1_0-E1.pdf} and \url{http://www.ccs-labs.org/bib/heinovski2016performance/heinovski2016performance.pdf}
+% 
+The radio communication requirements for ARIB consist of single channel radio communication in the 700 MHz band with both V2I and V2V communication. The communication have to support V2V communication up to 140 km/h and V2I up to 70 km/h.\par
+% 
+The protocol stack of ARIB STD-t109 is from the bottom, the physical layer based on IEEE 802.11p. Above the physical layer is the MAC (Medium access layer) with a combination of TDMA and CSMA/CA channel access. The next layer is the IVC-RVC layer, which controls the channel access parameters, synchronises clocks, and handles communication control. Lastly is the layer 7 and application layer which is for the communication with users and for security.\par
+% 
+Though ARIB is using a physical layer like IEEE 802.11p, one of the key differences is that the MAC distinguishes between communication traffic between IVC (Vehicle to vehicle) and RVC (Vehicle to infrastructure). The TDMA scheme is used by having control cycles of 100.000$\upmu$s which is then divided into 16 smaller cycles of  6240$\upmu$s. Each of the small cycles have 2 periods, the first period, 0 to 3024$\upmu$s is called RVC period which is the period where only V2I is allowed to access the channel. The reason is that the infrastructures is connected to multiple sensors scattered around the road, giving it more knowledge about the current situation than a vehicle for distributing safety information. Since each infrastructure can be allocated a specific time-slot in the RVC period, it is not necessary to use CSMA/CA. After the RVC period ends (after 3024$\upmu$s), vehicles can compete for channel access, but to avoid concurrent channel access with other vehicles, CSMA/CA is used \cite{Heinovski2016PerformanceSTD-T109}.\par
+% 
+Like the 802.11p and ETSI, ARIB also uses OFDM (Orthogonal Frequency Division 
+Multiplexing) as modulation scheme. OFDM uses BPSK, QPSK, 16-QAM and 64-QAM \footnotemark.\par
+% 
+\footnotetext{\url{http://rfmw.em.keysight.com/wireless/helpfiles/n7617a/coding_and_modulation.htm}, accessed on 17/04/2017}
+% 
+% 
+ARIB using both TDMA and CSMA/CA (compare to 802.11p only using CSMA/CA) gives it a better communication distance in urban environment almost up to 3 times the distance \cite{Heinovski2016PerformanceSTD-T109}, because it suffers less from obstacles such as buildings etc. On the other hand, because of the priority of the RVC period, it causes packet losses for the traffic between vehicles. For same reason, message delays also happens, since they need to wait for the next time slot, which is not reserved, this causes delay in ms. 
