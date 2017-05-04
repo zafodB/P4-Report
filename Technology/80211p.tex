@@ -4,3 +4,42 @@
 802.11p is designed for vehicle-to-vehicle (V2V) and vehicle-to-infrastructure (V2I) communication. This communication can often exist for short period of time only, therefore some of the properties (such as authentication) defined by original 802.11 standards are omitted. The 802.11p has served as base for the ITS-G5 standard (described in next section).\par
 % 
 % 
+While 802.11b only introduced some changes in the PHY layer to accommodate higher data rates in 2.4 GHz band, 802.11p introduces more significant changes in both PHY and MAC layers.
+The PHY characteristics of 802.11p are summed up in table \ref{table:11pPHY}.
+% 
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|r|}
+    \hline
+    \rowcolor{lightgray} Specification & 802.11p \\
+    \hline
+    Data rate & 3, 4, 5, 6, 9, 12, 18, 24, 27 Mbps \\
+    \hline
+    Modulation & OFDM \\
+    \hline
+    Coding rate & 1/2, 2/3, 3/4 \\
+    \hline
+    Number of subcarriers & 52 \\
+    \hline
+    OFDM symbol duration & 8 $\upmu$s \\
+    \hline
+    Guard Time & 1.6 $\upmu$s \\
+    \hline
+    Preamble duration & 32 $\upmu$s \\
+    \hline
+    Subcarrier Spacing & 0.15625 MHz \\
+    \hline
+\end{tabular}
+\caption{Specifications of 802.11p PHY layer. Source: \cite{Abdelgader2014TheChallenges}}
+\label{table:11pPHY}
+\end{table}
+% 
+Some of the specifications are the same as for amendment 802.11a, to which 802.11p is often compared. The PHY layer of 802.11p uses OFDM modulation with 52 carriers.
+They lie between 5,850–5,925 GHz (for the US) or 5,875–5,905 GHz (for Europe), which are frequencies licensed for vehicular use. The maximum range is 1000m in open space and maximum bandwidth is 27 Mbps \cite{Abdelgader2014TheChallenges}.
+Out of those 52 carriers, 4 (\emph{pilot carriers}) are always transmit the same pattern. This is used to correct possible phase and frequency offset on the receiver side (that may be present for example due to Doppler effect). The remaining 48 channels can be modulated using BPSK, QPSK, 16-QAM or 64-QAM modulation.\par
+Compared to 802.11a, it has increased the guard time, just as well as symbol duration. These changes were made in order to account the problems arising from the high mobility scenarios (such as doppler's spread).\par
+% 
+\footnotetext{\url{http://www.rfwireless-world.com/Terminology/WLAN-802-11a-versus-802-11p.html}}
+% 
+The MAC layer, the 802.11p makes use of Enhanced distributed channel access (EDCA). This algorithm improves the DCF specified earlier by dividing traffic into 4 categories (background traffic, best-effort traffic, video traffic and voice traffic). The more latency-sensitive categories, will naturally have higher priority and will try to be sent earlier.
+//More details on MAC and performance to follow up
