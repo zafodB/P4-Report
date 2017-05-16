@@ -1,0 +1,49 @@
+\section{Introduction}
+% 
+Travelling by car is part of everyday life of millions of people. Over the past decades, the number of vehicles on the roads has only been increasing\footnotemark. This brings up several challenges. How to fight the increasing pollution, to which road traffic contributes to? What to do, when there is so many cars, that they can not fit on existing roads? Some of these problems might be addressed by the concept of \emph{platooning}.\par
+% 
+\footnotetext{\url{http://www.huffingtonpost.ca/2011/08/23/car-population_n_934291.html}}
+% 
+The term \emph{platooning} has been popularised by the project SARTRE \cite{Chan2012ProjectSARTRE}, conducted between 2009 and 2012, which investigated, how vehicles can drive in groups, closely following each other. There are several benefits of this concept, which include fuel savings (due to drafting\footnotemark[1]), better utilisation of the road (as vehicles in platoon may drive closer to each other), increased safety and comfort of the users, since the drivers of vehicles travelling in the platoon (except the lead vehicle driver) do not need to focus on the road and may rest or work.\par
+% 
+The downside of platooning are increased responsibility of the lead vehicle driver (which may require them to take additional training). Furthermore, the drivers in following vehicles may not be completely aware of road conditions at all times and can fail to take over the control of the vehicle, in case of technological errors or other unforeseen circumstances. Another issue to be addressed is how to motivate the drivers to become the lead vehicle of the platoon.\par
+% 
+In order to achieve implementation of this concept in practice, there is number of crucial aspects to be considered, such as:
+\begin{itemize}[noitemsep]
+    \item \emph{Use-cases of the system} (e.g. How is the system used? What happens when...?)
+    \item \emph{Technology} (e.g. How do the vehicles communicate with each other?)
+    \item \emph{Road safety} (e.g. How far apart do the vehicles need to be?)
+    \item \emph{Law} (e.g. Does the law permit semi-/autonomous vehicles?)
+\end{itemize} \par
+% 
+There are indications, that there is research being conducted in this area, but this concept is not discussed very often in public space. Similarly, no major break-through have been announced lately that would increase the discussion about this on a level that would catch interest of general public.\par
+% 
+Together with our internal motivation, which includes personal interest in the topic, relevance of the topic, in regards to both our education and on-going development of intelligent cars, and availability of resources, we decided to investigate the area further. While we will not cover all of the aspects mentioned above, there is several areas, which we pinpointed and will be researching further.\par
+%
+\input{01Introduction/problemForm}
+% 
+\subsection{Delimitation}
+To stay on the right track while researching the topic, we came up with a set of delimitations. These are the areas we will not be looking into. First of them is law. The law regarding autonomous and self-driving cars is different from country to country and often changes frequently, as the 'smart cars' are being developed. We will suppose, that platooning is allowed by law, just like operation of self-driving vehicles.\par
+Another are we will not look into is human-machine interface. To successfully enable platooning, the solution will very likely involve changes in how truck drivers operate the trucks. Separate research could be made investigating, how this should be done. However, it is not the goal of this report.\par
+Even first research on the concept indicates, that fuel savings are present, when vehicles platoon. This leads to savings for companies that run the trucks and may also lead to secondary savings (lower road congestion, lower accident-related costs etc.). A proper business model would need to be introduced to allow fast and easy adaptation of the technology. We will not look into the business and economical side of the issue in this report.
+% 
+\subsection{Structure of the report}
+We will look into the concept from the IT perspective. After we present the methodology for this project in 
+\textit{\hyperref[sec:methodology]{Chapter} \ref{sec:methodology}},
+we research some of the most relevant up-to-date literature in 
+\textit{\hyperref[sec:literature]{Chapter} \ref{sec:literature}}. 
+Then we present analysis of stakeholders influenced by the platooning in 
+\textit{\hyperref[sec:stakeholders]{Chapter} \ref{sec:stakeholders}}.
+We will gather data in
+\textit{\hyperref[sec:data]{Chapter} \ref{sec:data}}
+and come up with use cases and requirements of the system in 
+\textit{\hyperref[sec:requirements]{Chapter} \ref{sec:requirements}}
+. In the following part of the report - in 
+\textit{\hyperref[sec:technology]{Chapter} \ref{sec:technology}}
+, we will investigate existing technologies, standards and projects. Namely we will look into \emph{V2V communication, ITS-G5, 802.11p} standards and other technologies and systems we may discover. We will analyse the possible solutions in 
+\textit{\hyperref[sec:Analysis]{Chapter} \ref{sec:An}}
+. Discussion and conclusion will follow.
+% 
+\footnotetext[1] {Drafting is a technique where two vehicles align, utilising the slipstream of the lead vehicle and thus reducing the air resistance of following vehicles.}
+% 
+

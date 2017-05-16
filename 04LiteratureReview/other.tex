@@ -1,0 +1,38 @@
+
+% Book: Fuel-efficient heavy-duty vehicle platooning
+\subsection{\textit{Fuel-efficient heavy-duty vehicle platooning}}
+The thesis by Alam A. \cite{Alam2014Fuel-efficientPlatooning}, which was later published also as a book poses as a very valuable resource for this project. The author recognises the growing need of solving the road congestion problem and the persistent need of fuel savings. In the thesis author investigates how the platoons, formed of HDVs (Heavy duty vehicles), can be designed, implemented and what the parameters for optimal fuel savings, while maintaining reasonable level of safety, are.\par
+% 
+% 
+The experiments have been performed with a platoon of three similar HDVs, with 90km long test runs on a highway in Sweden. Fuel consumption was being measured, first, while vehicles were driving alone, and later, while driving in platoon. The test runs were conducted multiple times over period of 5 days to rule out the influences of weather and other variables. The findings show that fuel reduction between 3.9\% and 6.5\% can be obtained for vehicles in the platoon, depending on the weight of the vehicles. Another major influence on the fuel savings is the road gradient. The test runs showed, that with greater road gradient the efficiency of the platoon drops. Reasons for this is the limited engine power and other system dynamics that have not been accounted for, such as gear changes. The thesis also concludes, that it is possible to operate a platoon with inter-vehicular distances between 1-2 meters while maintaining safe operation. Smaller distances could be possibly achieved with more powerful breaks and shorter delays in communication. Furthermore, due to the lack of detailed research, it is concluded that \textquote[\cite{Alam2014Fuel-efficientPlatooning}]{It is still unclear how the unmodeled nonlinearities, such as gear changes, brake dynamics, engine dynamics, and a varying road topography affect the control performance in practice.}
+\par
+% 
+Two models are investigated for controlling the behaviour of the platoon. First, \emph{decentralised} model investigates how the platoon could work, if there is no central control node, but rather each vehicle only communicates with the vehicles surrounding it. The second, \emph{look-ahead control} model describes, how to account for differences among vehicle mass and engine power, which become critical for efficient operation of a platoon in steep road sections, by adjusting the speed of a vehicle prior to approaching a steep road segment.
+\par
+% 
+Technology-wise, the thesis is not very detailed. It states, the the test vehicles are equipped with wireless control unit, which uses IEEE 802.11p standard for communication. Furthermore, GPS and a \enquote{standard doppler radar}. We will further investigate the use of these technologies.
+% 
+% 
+%
+% IEEE journal article: Cooperative look-ahead control for fuel-efficient and safe heavy-duty vehicle platooning
+\subsection{\textit{Cooperative look-ahead control for fuel-efficient and safe heavy-duty vehicle platooning}}
+% 
+This article \cite{Turri2016CooperativePlatooning} published in IEEE journal, similarly as \cite{Alam2014Fuel-efficientPlatooning}, considering only HDVs as members of the platoon, investigates how slopes influence the effectiveness of the platoon. It further investigates models that could be used to increase the fuel efficiency of the platoons in hilly areas.
+\par
+% 
+It compares the three approaches to driving vehicles in a group: \emph{Cruise Control} (CC), \emph{Look-ahead cruise control} (LACC) and \emph{Cooperative look-ahead cruise control} (CLAC), each with different rules regarding the control of vehicles' speed. The CLAC is considered as most effective method, as it provides all members of the platoon with sufficient information about road ahead, so they can adjust their own speed accordingly. The CLAC introduces new layer into the platooning, denoted as \emph{platoon coordinator} layer. Such layer \textquote[\cite{Turri2016CooperativePlatooning}]{is responsible  for  the  coordination  of  the  platoon  by  defining a speed profile that is feasible and fuel-efficient for the entire platoon  by  exploiting  preview  topography  information}.
+\par
+% 
+% 
+% 
+% Vehicle Platoon Formation Using Interpolating Control (article) from AAU
+\subsection{Other works}
+% 
+Number of works, like \cite{Alvarez1997SafeSystems}, \cite{Nowakowski2015CooperativeAlternatives} focus on the system from higher perspectives and discuss, what the overall goal of the system is, what in involves, how it should be used to ensure safety of the traffic and what the architecture of such system should be. Some of the works \cite{Larsson2015TheHeuristics}
+approach the problem of platooning from the perspective of mathematics and algorithmization. They try to answer the questions of ideal vehicle routing on (inter-)national scale, in order to optimise the flow of the vehicles and create best strategies for formation of the platoons.
+Another important aspect for the problem is how to maximise the fuel savings. Journal article \cite{Turri2016CooperativePlatooning} investigates the changes in the fuel savings in hilly terrain and how to optimise the algorithms of platooning vehicles (trucks) in areas, where they have to break and accelerate often.\par
+% 
+\subsubsection{\textit{Vehicle Platoon formation}}
+The article \cite{Tuchner2015VehicleControl} shows how it is possible to solve the problem of platooning through regulating the vehicles speed and spacing between them with the use of math and algorithms. 3 different solution is being compared with Interpolation Control, Improved Interpolation Control and Model Predictive Control. The differences in result can be found in the article.\par
+%No idea how the math works, but at least we can reference to this, when talking about that its not only data between the vehicles, but also alot of math running in the background. 
+% 

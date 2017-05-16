@@ -1,5 +1,6 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[left=2.54cm,top=3cm,right=2.54cm,bottom=3cm]{geometry}
@@ -8,48 +9,62 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{upgreek}
+\usepackage{eurosym}
+\usepackage{rotating}
 \usepackage[table]{xcolor}
 \renewcommand{\arraystretch}{1.3}
 
-\graphicspath{ {images/} }
+\graphicspath{ {00images/} }
 
 \addbibresource{mendeley.bib}
 
 \title{P4 Report}
-\author{fadami15 }
-\date{March 2017}
+\author{Filip Adamik, Ignas Bagdonas, Michal Kristofik, Vu Ngoc Viet Nguyen}
+\date{March-May 2017}
 
 
 \setlength{\parindent}{10ex}
 
 \begin{document}
-
+% 
 % \maketitle
-
+% 
 % /To be changed later on/
-
+% 
 % \pagebreak
+\tableofcontents
 
-% \include{introduction}
-% \pagebreak
-
-% \include{problemForm}
-% \pagebreak
-
-% \include{methodology}
-% \pagebreak
-
-% \include{LiteratureReview/LRmain}
-% \pagebreak
-
-% \include{Interwviews}
-% \pagebreak
-
-
-\include{Technology/technology}
+\include{01Introduction/introduction}
 \pagebreak
 
-\include{Interviews/interviews}
+\include{02ProblemFormulation/problemForm}
+\pagebreak
+
+\include{03Methodology/methodology}
+\pagebreak
+%
+\include{04LiteratureReview/LRmain}
+\pagebreak
+
+\include{05StakeholderAnalysis/Stakeholder}
+\pagebreak
+
+\include{06EmpiricalData/EDmain}
+\pagebreak
+
+\include{07Requirements/requirements}
+\pagebreak
+
+\include{08Technology/technology}
+\pagebreak
+
+\include{09Analysis/analysis}
+\pagebreak
+
+\include{10Discussion/discussion}
+\pagebreak
+
+\include{11Conclusion/conclusion}
 \pagebreak
 
 \printbibliography

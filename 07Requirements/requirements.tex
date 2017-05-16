@@ -1,0 +1,46 @@
+\section{Requirement Specification}\label{sec:requirements}
+%
+In order to satisfy the stakeholders in any technological project, their requirements need to be met. The stakeholders' requirements, however, may sometimes be incomplete, contradictory or unclear. To avoid confusion, requirement specification is often conducted to clear any possible misunderstandings and present a unambiguous set of requirements a system should fulfil. In previous chapter we have identified who the stakeholders are and what their role in the system is. The scope of this report does not allow to analyse all of the requirements possible for the platooning system. Rather we will only focus on technology-related ones. We will list some of the requirements that may influence the decision made while choosing one particular technology. To assist eliciting those requirements, several use cases are presented that represent the most common actions in the platooning scenario.
+%
+\input{07Requirements/UseCases}
+%
+\subsection{Requirements}
+After learning about the concept of platooning and establishing state of the art research, we quickly realised that there is a great number of requirements that need to be met for successful real-world platoon implementation. Project this big has a lot of stakeholders, who are very different - platoon gets great attention from governments, logistic companies, truck manufacturers, regular drivers and more. Every stakeholder sees platooning from different perspective and have different requirements for it. While not every user requirement is measured or possible to achieve, it must be considered and evaluated before it gets rejected. And this is only one side of the problem. We have discovered that there are loads of technical requirements as well. Technologies for platooning are still under development and usually there are multiple ways to meet technical requirement and every solution has its pros and cons.\par
+Using data from research, primary and secondary interviews/surveys we have gathered and filtered the most relevant requirements following delimitations for this project. Following these requirements we well research possible technical solutions and in the end of project discuss if and how these specifications can be met.\par
+%
+\subsubsection{User requirements}
+%
+\begin{itemize}
+    \item\textbf{Platoon must improve safety on the roads} - one of the main reasons for implementing platooning. We learned that humans are not very good drivers, there are thousands of accidents every year in the world, and most of them are caused by human error. In general, automated driving technologies are trying to minimise human mistakes by taking over vehicle's control or assisting drivers on the road.
+    %
+    \item\textbf{Platooning must lower fuel consumption} - every business is constantly trying to minimise costs and maximise income, in transportation fuel costs are the ones that can be lowered within help of platooning, as Companion project has proven with many different real and simulated tests. Research showed that every stakeholder of platooning expects to lower expenses - whether it's a company that manufactures goods and wants to transport them, or logistics company, or just a simple person using vehicle for travelling. On top of that - lowering fuel consumption means more environment friendly transportation.
+    %
+    \item\textbf{Form platoon as ad hoc network} - this solution is widely discussed in Companion project and is the most important requirement for our project as well. Forming or joining platoon while on the go means that vehicles doesn't have to start their trips from same location and can have different destinations too. It gives opportunity to save costs constantly and for everyone. For example personal car can join platoon of trucks and leave it whenever their routes separates. Trucks will be able to join and leave several platoons throughout their journey.
+    %
+    \item\textbf{Back-end system must plan long distance trips} - using remote back-end system users will form platoons and plan routes ahead. System must keep track of all platoons that are or will be on the road. This way planned platoons can be combined with users who are willing to join on the go as well as change routes, reform platoons and much more.
+    %
+    \item\textbf{Ad hoc platooning must be reliable} - while this is very broad requirement it is self explanatory as well. For fully or semi automated ad hoc platoon to ever be even allowed on the roads, every bit of the system must be reliable. From technical implementation to route planning, everything must be tested and confirmed.
+    %
+    \item\textbf{Improved driving experience} - from interviews and surveys we noticed that drivers asked about platooning, firstly think about more comfortable driving. Platoon is aiming to provide better work conditions and efficiency by taking some responsibilities from drivers. Allowing drivers take their breaks while travelling in platoon would not only improve workers satisfaction but also would save time for the companies.
+\end{itemize}
+%
+\subsubsection{Technical requirements}
+%
+All the research from sections above and functional requirements leads us to general functional requirements. In this project we mostly focus on communication solutions and requirements listed below has to be met to successfully implement ad hoc platooning.
+%
+\begin{itemize}
+    \item\textbf{V2V must use short-range communication technology} - V2V communication must be implemented with most suitable technology for the case. There are quite few standards around the world, but automated driving is not ready yet for real-world stage and we must evaluate each standards advantages and disadvantages.
+    %
+    \item\textbf{Connect to backend service over wireless technology} - for planning/finding platoons vehicle must communicate to remote backend service. Vehicle must have at least periodical Internet connection for successful route planning.
+    %
+    \item\textbf{Join/find platoon without any V2I communication} - if user cannot access Internet to use platoon back-end service, there must be possibility to detect or join platoon using only V2V communication.
+    %
+    \item\textbf{V2I must allow non-highway platooning} - where V2I communication is available, meaning user has Internet access and road infrastructure is implemented (e.g. traffic lights, any other RSU) platooning must be possible on non-highway roads. 
+    %
+    \item\textbf{System must be able suitable for different type/brand vehicles} - ad hoc platooning must be available for different brand vehicles. Logistics company might owe different vehicles, so for ad hoc platooning to expand it must be a kind of "cross-platform" solution.
+    %
+    \item\textbf{Critical messages must reach destination} - critical messages like crash/break warnings must arrive at right order, they cannot be lost or interfered by any other irrelevant communication.
+\end{itemize}\par
+%
+Requirements above were gathered using primary and secondary data, as well as our own brainstorming and knowledge. These seem to be critical requirements for successful ad hoc platoon communication. Solutions or propositions for these requirements will be provided in Solution Proposition chapter.
+
