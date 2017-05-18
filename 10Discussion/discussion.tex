@@ -1,3 +1,45 @@
-\section{Discussion}
-
-//Discussion goes here
+\section{Discussion}\label{sec:discussion}
+%
+During this project many things has changed until it gotten into a shape of this report. There are a lot of important aspects of platooning, that were discussed, but not investigated in more detailed manner. Based on limitations we defined scope for this project and focused on researching them. In this chapter we have gathered some more interesting and important topics, that we feel should be discussed. \par
+% 
+%-Why didn't we look into 4G/LTE?
+%-What impacts would 5G have?
+\subsection{V2I communication / Internet access}
+%
+Our ad hoc platoon solution is mainly based on V2V communication and doesn't require V2I implementation, but we think that more advanced use cases (e.g. planning a platoon from distance and some time ahead) will require V2I communication or at least periodical Internet access. We have not investigated Internet access technologies for vehicles, but our knowledge lets us assume that some mobile data technology would be used to access Internet without depending on V2I and any road side units.\par
+% 
+For mobile connectivity \emph{4G/LTE} networks are used widely around the world and would be suitable for communication with our back-end office from platoon vehicle. It is obvious that these mobile data technologies could not provide constant Internet connection, but our model would only require Internet connection for some specific use cases. Information sent and received from back-end service would not be as critical as V2V communication between the cars, so some latency and packet loss are acceptable.\par
+% 
+Wikipedia notices that new mobile generation rolls out every 10 years since 1G in 1982. It is expected that new \emph{fifth generation (5G)} would come out somewhere around 2020. Its formal technology standard is not set yet, but it should be based on 802.11ac \cite{Mercer2017What5G}.
+5G is supposed to be 3 times faster that 4G and lower latency to 1ms. Its base stations should support high speed vehicular connectivity (from 0km/h to 500km/h) \cite{Anthony20175GKm}. Keeping that in mind, Fifth generation has potential to change V2I and V2V communication dramatically. With such low latency and high speeds, direct V2V communication eventually could become unnecessary.
+%
+% 
+\subsection{General platooning implementation}
+Here we discuss some questions/thoughts about general platooning concept that came up during the project. These topics consists questions like where platoon should be implemented, on what roads should it be available and so on. They were left out of scope for this project, but we feel that these questions would be crucial for real-world implementation.
+%
+\subsubsection{Worldwide or only EU?}
+%
+%-What is the differences between platooning in Europe and US (and Japan?)?\par
+One of the first discussions we had when brainstorming about automated platooning was whether we should talk about worldwide solution or focus on Europe (since we are located in Denmark). We quickly realised that there is no main difference where to implement platooning in the world. All continents and different countries are interested into platooning development. Even though focus was mostly on Europe, we found different projects and experiments being established all over the world - Companion\cite{2016CompanionProject} or Sartre\cite{Chan2012ProjectSARTRE} in Europe, Peloton company in US\footnotemark and more.
+Communication technologies tend to have some differences depending on continent too - ARIB is Japanese based organisation, while WAVE technology is coming from US and ITS G5 - from Europe.
+In the end even though there are some minor differences depending on location, experts are working worldwide to solve same problems related to platooning. Platoon as a technology should, and we believe will be implemented on roads, regardless where in the world.
+%
+\footnotetext{\url{http://peloton-tech.com/}, accessed on 17/05/2017.}
+%-Should platooning be for regular cars or only for trucks?\par
+\subsubsection{Trucks only or regular cars too?}
+When started State of the Art research, we quickly noticed that almost all platoon development is established by either truck, logistics companies or organisations (such as EU) working closely with truck companies. It is clear that truck/logistics stakeholders are willing to save costs on transportation, and that is why most of research investments are directed to truck platooning. On other hand automated driving is a very popular topic for regular car manufacturers and simple drivers. After doing the research of possible solutions and available technology, study team agreed that platooning can be implemented and would be beneficial to form platoon no matter of vehicle type and brand.\par
+% 
+Most of the material we could find was focused on trucks, as experts and research teams are hired by biggest logistic companies. Because of time limitations we were not able to look into personal cars platooning specifically, but we believe that as long vehicles are equipped with necessary OBUs and can communicate to each other, platooning will be beneficial for all types of vehicles.
+%
+%-Should platooning be on roads too, or only on highways?\par
+\subsubsection{What roads are suitable for platooning?}
+Early in the process after project topic was settled, we wanted to come up with a ideal solution for all the use cases. That meant worldwide platooning, for any vehicle and pretty much any road. During further process some decisions had to be made, and we decided to focus mostly on highway platooning. There are several reasons for this:
+\begin{itemize}
+    \item RSU dependency - our ad hoc platooning solution is meant to work without being dependant on road side units. After learning platoon and automated driving principles we believe that successful road train implementation in city area requires advanced road infrastructure.
+    \item Limited resources for the project - when researching platooning in urban areas we realised that this topic is closely related to automated driving development. Because of time limitation and complexity of the problem we decided to concentrate mostly on highway platooning.
+\end{itemize}
+%
+%-Should the driver of LV have special license?\par
+\subsection{Drivers' perspective}
+After learning state of the art, we can see that legislation and regulation is as big of a problem as technology implementation itself. Law is not able to adapt as fast as technology changes. Even if vehicles will soon be ready to drive by them selves on real roads, it will take quite some time before we will not need drivers sitting in them. Researched projects and experiments proved that in case of automated platoon it is much safer for following cars to be driven by computers, than rely on human driving in such close distance. But what about the leading vehicle? Should it be semi or fully automated? And can any driver be in a leading vehicle? We had this discussion numerous of times during project and still it is a open discussion. In most experiments truck platooning was dependant on adaptive cruise control and while following drivers could just sit and relax, leading vehicle's driver was responsible for braking and watching surroundings for any hazards on or near the road. Drivers also had to take some kind of training to be driving in front of platoon. We believe that all this is necessity for the time being, but it is matter of time when automated driving and platoon will not require any special skill or supervision.
+%
