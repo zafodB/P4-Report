@@ -6,12 +6,12 @@ This project is mostly focused on technical side of ad hoc platoon implementatio
 % 
 \subsubsection{Find/initiate platoon}
 % 
-This is initial use case to start using platoon service on the road. Driver using some kind of HMI implementation on his vehicle must be able to detect existing platoon to join or other drivers that are willing to form a platoon. Long distance communication is required, for driver to be able to plan (slow down, speed up, adjust the route) his entry to platoon. To implement this use case V2I communication is a primary requirement, although V2V could be used too for short distance notification. For example if user is not in platoon mode (has not decided to join platoon) but is approaching existing platoon on the same road, notification could be shown to driver suggesting to join. We will discuss technology limitations of V2V and V2I in Empirical data and Technology sections.
+This is initial use case to start using platoon service on the road. Driver using some kind of HMI implementation on his vehicle must be able to detect existing platoon to join or find other drivers that are willing to form a platoon. Long distance communication is required, for driver to be able to plan (slow down, speed up, adjust the route) his entry to platoon. To implement this use case - V2I communication could be used for long-distance implementation and extra functionality, although it must be possible to find or initiate platoon only using V2V. We will discuss technology limitations of V2V and V2I in Empirical data and Technology sections.
 % 
 \paragraph{Actors of the use case}
 \begin{itemize}[noitemsep]
     \item Primary actor - a driver or a vehicle (in a fully automated platoon) which is willing to join/form platoon.
-    \item Back-end service - a crucial part for long distance ad hoc platoon planning. It could serve for both business (logistics routing) and personal needs. It should be implemented as a remote server (could a cloud solution), that would be reached over long distance communication. This back-end solution will keep track of all existing platoons and vehicles that are looking for a platoon. When match is found it will create a route for the user to successfully meet and join the platoon or even several platoons throughout whole distance.
+    \item Back-end service - a crucial part for long distance ad hoc platoon planning. It could serve for both business (logistics routing) and personal needs. It should be implemented as a remote server, that would be reached over long distance communication. This back-end solution will keep track of all existing platoons and vehicles that are looking for a platoon. When match is found it will create a route for the user to successfully meet and join the platoon or even several platoons throughout whole distance.
     \item Any other moving or fixed unit on the road (e.g. other cars acting as relays to pass information about existing platoon nearby)
 \end{itemize}
 % 
@@ -38,7 +38,7 @@ Another crucial use case for platooning concept. This use case is focused around
 \paragraph{Actors of the use case}
 \begin{itemize}[noitemsep]
     \item Primary actor - vehicle that is approaching the platoon and ready to join or is in the platoon and wants to leave the platoon because of different routes or any other reasons.
-    \item Secondary actors - vehicles around or in the platoon, as well as any available Road Side Units. While joining/leaving the platoon, V2V or even V2I would make sure that it is safe to perform any actions on the road. For example any RSU or a leading car in the platoon could inform Primary actor that slow down is ahead, and it is not safe to enter the platoon.
+    \item Secondary actors - vehicles around or in the platoon, as well as any available Road Side Unit. While joining/leaving the platoon, V2V or even V2I would make sure that it is safe to perform any actions on the road. For example any RSU or a leading car in the platoon could inform Primary actor that some slow down is ahead, and it is not safe to enter the platoon.
 \end{itemize}
 % 
 \paragraph{Pre-conditions}

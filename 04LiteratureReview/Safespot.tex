@@ -1,5 +1,5 @@
 \subsection{\textit{SAFESPOT}}
-In 2006 a project running for 4 years called SAFESPOT \cite{Safespot} was co-funded by the European Commission Information Society and Media, and had as objective to improve road safety. One of the key elements was to have vehicles exchange data between them and with infrastructure (V2V and V2I) to advice or warn the driver of upcoming situation happening.\par
+In 2006 a project running for 4 years called SAFESPOT \cite{Safespot} was co-funded by the European Commission Information Society and Media, and had an objective to improve road safety. One of the key elements was to have vehicles exchange data between them and with infrastructure (V2V and V2I) to advice or warn the driver of upcoming situation happening.\par
 % 
 \subsubsection{Architecture}
 SAFESPOT is composed of nodes, that communicates with each other through short range wireless communication called VANET (Vehicle Ad-hoc NETwork) using \hyperref[sec:802.11p]{IEEE 802.11p} as physical layer. A node can be in a vehicle or on an infrastructure such as a traffic light. All nodes create data through their sensors or through data from other nodes and are then collected in a multi-layered Database named Local Dynamic Map (LDM).
@@ -7,10 +7,10 @@ LDM consist of 4 layers. From bottom up, the first is the static map like Google
 To locate the position of the vehicles, SAFESPOT uses the road data from GPS, road landmark recognition and dead reckoning\footnotemark.\par
 %
 % 
-\footnotetext{\textquote[\url{https://en.wikipedia.org/wiki/Dead_reckoning}]{In navigation, dead reckoning or dead-reckoning is the process of calculating one's current position by using a previously determined position, or fix, and advancing that position based upon known or estimated speeds over elapsed time and course.}}
+\footnotetext{\textquote[Taken from: \url{https://en.wikipedia.org/wiki/Dead_reckoning}]{\textit{In navigation, dead reckoning or dead-reckoning is the process of calculating one's current position by using a previously determined position, or fix, and advancing that position based upon known or estimated speeds over elapsed time and course.}}}
 % 
 % 
-The data rate and communication channel usage is restricted and is one of the physical bottle neck in the system. US WAVE 802.11.p (which is similar to SAFESPOT) has a data rate of:
+The data rate and communication channel usage is restricted and is one of the physical bottle neck in the system. US WAVE standard (which is similar to SAFESPOT) has a specified data rate of:
 \begin{itemize}[noitemsep]
     \item Remote On Board Unit (vehicle): 2320 bit/s
     \item Remote Road Side Unit (traffic light): 22500 bit/s  
