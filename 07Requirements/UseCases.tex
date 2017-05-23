@@ -1,12 +1,12 @@
 \subsection{Use cases for ad hoc platoon}
 % 
-There are many different use cases in platooning. It is a very complex and large network made of many moving and fixed parts. It involves V2X communication, where messages are sent and received forth and back at very intense speeds and frequency.\par
+There are many different use cases in platooning. It is a very complex and large network made of many moving and fixed parts. It involves \acrshort{V2X} communication, where messages are sent and received forth and back at very intense speeds and frequency.\par
 %  
 This project is mostly focused on technical side of ad hoc platoon implementation and we will only touch upon use cases that are related for this research.
 % 
 \subsubsection{Find/initiate platoon}
 % 
-This is initial use case to start using platoon service on the road. Driver using some kind of HMI implementation on his vehicle must be able to detect existing platoon to join or find other drivers that are willing to form a platoon. Long distance communication is required, for driver to be able to plan (slow down, speed up, adjust the route) his entry to platoon. To implement this use case - V2I communication could be used for long-distance implementation and extra functionality, although it must be possible to find or initiate platoon only using V2V. We will discuss technology limitations of V2V and V2I in Empirical data and Technology sections.
+This is initial use case to start using platoon service on the road. Driver using some kind of \acrshort{HMI} implementation on his vehicle must be able to detect existing platoon to join or find other drivers that are willing to form a platoon. Long distance communication is required, for driver to be able to plan (slow down, speed up, adjust the route) his entry to platoon. To implement this use case - \acrshort{V2I} communication could be used for long-distance implementation and extra functionality, although it must be possible to find or initiate platoon only using \acrshort{V2V}. 
 % 
 \paragraph{Actors of the use case}
 \begin{itemize}[noitemsep]
@@ -17,7 +17,7 @@ This is initial use case to start using platoon service on the road. Driver usin
 % 
 \paragraph{Pre-conditions}
 \begin{itemize}[noitemsep]
-    \item Vehicle that is suitable for platooning - equipped with technologies for V2X communication and fully/semi automated driving.
+    \item Vehicle that is suitable for platooning - equipped with technologies for \acrshort{V2X} communication and fully-/semi-automated driving.
     \item Access to Internet is also critical for ad hoc platooning, although constant connection might not be necessary, for example when platoon is found and route to it is transferred to vehicle's navigation system, connection could be terminated.
 \end{itemize}
 % 
@@ -33,27 +33,27 @@ There are concerns for Internet access implementation in moving vehicles and res
 % 
 \subsubsection{Join/leave moving platoon}
 % 
-Another crucial use case for platooning concept. This use case is focused around short range communication between vehicles in platoon and the ones who want to join or leave it. Before a vehicle can join/leave moving platoon, all the cars around must adapt and perform necessary actions to make sure safe process. For semi or, in future, fully automated vehicle to successfully join or leave platoon, communication must be precise without any overlapping or interference.\par
+Another crucial use case for platooning concept. This use case is focused around short range communication between vehicles in platoon and the ones who want to join or leave it. Before a vehicle can join/leave moving platoon, all the cars around must adapt and perform necessary actions to make sure safe process. For semi- or, in future, fully-automated vehicle to successfully join or leave platoon, communication must be precise without any overlapping or interference.\par
 % 
 \paragraph{Actors of the use case}
 \begin{itemize}[noitemsep]
     \item Primary actor - vehicle that is approaching the platoon and ready to join or is in the platoon and wants to leave the platoon because of different routes or any other reasons.
-    \item Secondary actors - vehicles around or in the platoon, as well as any available Road Side Unit. While joining/leaving the platoon, V2V or even V2I would make sure that it is safe to perform any actions on the road. For example any RSU or a leading car in the platoon could inform Primary actor that some slow down is ahead, and it is not safe to enter the platoon.
+    \item Secondary actors - vehicles around or in the platoon, as well as any available Road Side Unit. While joining/leaving the platoon, \acrshort{V2V} or even \acrshort{V2I} would make sure that it is safe to perform any actions on the road. For example any \acrshort{RSU} or a leading car in the platoon could inform Primary actor that some slow down is ahead, and it is not safe to enter the platoon.
 \end{itemize}
 % 
 \paragraph{Pre-conditions}
 \begin{itemize}[noitemsep]
-    \item Vehicle has approached platoon in a sufficient distance for V2V communication.
+    \item Vehicle has approached platoon in a sufficient distance for \acrshort{V2V} communication.
     \item Vehicle has to leave the platoon, for example because it needs to turn into another road or make an unplanned stop.
 \end{itemize}
 % 
 \paragraph{Process}
 \begin{itemize}[noitemsep]
-    \item Vehicle approaching platoon establishes V2V communication with other vehicles in the platoon. It is up to system design to decide to which and how many cars needs to communicate to join the platoon. For example depending on a car type, or destination, user could be assigned to a different place in the platoon (e.g. front of the platoon, middle or end).
+    \item Vehicle approaching platoon establishes \acrshort{V2V} communication with other vehicles in the platoon. It is up to system design to decide to which and how many cars needs to communicate to join the platoon. For example depending on a car type, or destination, user could be assigned to a different place in the platoon (e.g. front of the platoon, middle or end).
     \item When all conditions for safe join are met, vehicles might need to take some actions to let arriving car into the platoon.
     \item User successfully joins the platoon and stays in it until he/she needs to turn or platoon breaks up for some other reasons.
     \item When user must leave the platoon for any reason other cars will be informed about state change by short distance communication. Same as with joining platoon, any other participant or infrastructure on the road could communicate to the platoon, to make any actions as safe as possible.
     \item Cars in front and back performs necessary actions (e.g. make bigger gaps, slow down and etc.) and Primary actor leaves the platoon.
 \end{itemize}
 % 
-Main concern for the use case is quality and speed of V2V communication. Driving and performing actions in high speed and very short distance between the vehicles might be dangerous, so there cannot be any errors or loss of critical messages during the process.
+Main concern for the use case is quality and speed of \acrshort{V2V} communication. Driving and performing actions in high speed and very short distance between the vehicles might be dangerous, so there cannot be any errors or loss of critical messages during the process.

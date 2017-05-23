@@ -9,41 +9,110 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{upgreek}
+\usepackage{setspace}
+\usepackage{longtable}
 \usepackage{eurosym}
 \usepackage{rotating}
 \usepackage[table]{xcolor}
+\usepackage[acronym,toc]{glossaries}
+
 \renewcommand{\arraystretch}{1.3}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
 
 \graphicspath{ {00images/} }
 
 \addbibresource{mendeley.bib}
 \setlength{\parindent}{10ex}
 
+% Acronyms %%%%%%%%
+\makeglossaries
+\newacronym{dtl}{DTL}{Danish Transport and Logistics}
+\newacronym{its}{ITS}{Intelligent Transport Systems}
+\newacronym{wave}{WAVE}{Wireless Access in Vehicular Environments}
+\newacronym{V2V}{V2V}{Vehicle to Vehicle}
+\newacronym{V2I}{V2I}{Vehicle to Infrastructure}
+\newacronym{V2X}{V2X}{Vehicle to Everything}
+\newacronym{arib}{ARIB}{Association of Radio Industries and Businesses}
+\newacronym{sartre}{SARTRE}{Safe Road Trains for the Environment}
+\newacronym{VANET}{VANET}{Vehicular Ad-hoc Network}
+\newacronym{GPS}{GPS}{Global Positioning System}
+\newacronym{LDM}{LDM}{Local Dynamic Map}
+\newacronym{OBU}{OBU}{On-board Unit}
+\newacronym{RSU}{RSU}{Road-side Unit}
+\newacronym{DSRC}{DSRC}{Dedicated Short Range Communication}
+\newacronym{ROI}{ROI}{Range of Interest}
+\newacronym{FV}{FV}{Following Vehicle}
+\newacronym{HMI}{HMI}{Human-machine interface}
+\newacronym{IEEE}{IEEE}{Institute of Electrical and Electronics Engineers}
+\newacronym{CACC}{CACC}{Cooperative Adaptive Cruise Control}
+\newacronym{HDV}{HDV}{Heavy-duty Vehicle}
+\newacronym{CC}{CC}{Cruise Control}
+\newacronym{LACC}{LACC}{Look-ahead Cruise Control}
+\newacronym{CLAC}{CLAC}{Cooperative Look-ahead Cruise Control}
+\newacronym{ACC}{ACC}{Adaptive Cruise Control}
+\newacronym{CFD}{CFD}{Computational Fluid Dynamics}
+\newacronym{ETSI}{ETSI}{European Telecommunication Standards Institute}
+\newacronym{PHY}{PHY}{Physical Layer}
+\newacronym{MAC}{MAC}{Media Access Control}
+\newacronym{DSSS}{DSSS}{Direct Sequence Spread Spectrum}
+\newacronym{DPBSK}{DPBSK}{Differential Binary Phase-shift Keying}
+\newacronym{CCK}{CCK}{Complementary Code Keying}
+\newacronym{DQPSK}{DQPSK}{Differential Quadrature Phase-shift Keying}
+\newacronym{DBPSK}{DBPSK}{Differential Binary Phase-shift Keying}
+\newacronym{DIFS}{DIFS}{Distributed inter-frame Space}
+\newacronym{SIFS}{SIFS}{Short Inter-frame Space}
+\newacronym{CSMA}{CSMA/CA}{Carrier Sense Multiple Access with Collision Avoidance}
+\newacronym{DCF}{DCF}{Distributed Coordination Function}
+\newacronym{EIFS}{EIFS}{Extended Inter-frame Space}
+\newacronym{CW}{CW}{Connection Window}
+\newacronym{RTS}{RTS/CTS}{Request To Send / Clear To Send}
+\newacronym{OFDM}{OFDM}{Orthogonal frequency-division Multiplexing}
+\newacronym{QAM}{QAM}{Quadrature Amplitude Modulation}
+\newacronym{QPSK}{QPSK}{Quadrature Phase-shift Keying}
+\newacronym{BPSK}{BPSK}{Binary Phase-shift keying}
+\newacronym{EDCA}{EDCA}{Enhanced Distributed Channel Access}
+\newacronym{AC}{AC}{Access Class}
+\newacronym{AIFS}{AIFS}{Arbitration Inter-frame Space}
+\newacronym{TDMA}{TDMA}{Time-division Multiple Access}
+\newacronym{LTE}{LTE}{Long Term Evolution (Mobile Communication Standard)}
+\newacronym{PMD}{PMD}{Physical Medium Dependent}
+\newacronym{PLCP}{PLCP}{Physical Layer Convergence Protocol}
+\newacronym{LLC}{LLC}{Logical Link Control}
+\newacronym{PDU}{PDU}{Protocol Data Unit}
+\newacronym{MPDU}{MPDU}{MAC Protocol Data Unit}
+\newacronym{FCS}{FCS}{Frame Check Sequence}
+\newacronym{LSDU}{LSDU}{Link Service Data Unit}
+\newacronym{DSAP}{DSAP}{Destination Service Access Point}
+\newacronym{SAP}{SAP}{Service Access Point}
+\newacronym{SSAP}{SSAP}{Source Service Access Point}
+\newacronym{SCH}{SCH}{Service Channel}
+\newacronym{CCH}{CCH}{Control Channel}
+\newacronym{DCC}{DCC}{Decentralised Congestion Control}
+\newacronym{WSM}{WSM}{WAVE Short Message}
+\newacronym{WSMP}{WSMP}{WAVE Short Message Protocol}
+\newacronym{IP}{IP}{Internet Protocol}
+\newacronym{PSID}{PSID}{Provide Service Identifier}
+\newacronym{QoS}{QoS}{Quality of Service}
+% \newacronym{}{}{}
+% \newacronym{}{}{}
+% \newacronym{}{}{}
+% \newacronym{}{}{}
 
-\title{Research on Platooning Technology\newline\newline P4 Report}
-\author{Filip Adamik, Ignas Bagdonas, Michal Kristofik, Vu Ngoc Viet Nguyen}
-\date{March-May 2017}
 
-
+%%%%%%%%%%%%%%%%%%% 
 
 \begin{document}
 % 
-\maketitle
-% 
-Aalborg University Copenhagen\par
-\begin{figure}[b]
-    \centering
-    \includegraphics[width=.99\textwidth]{trucks-scania}
-    \label{fig:trucks-scania}
-\end{figure}
-% 
-\pagebreak
 \tableofcontents
+\pagebreak
+
+\begin{singlespacing}
+\setglossarystyle{long}
+\printglossary[type=\acronymtype, title=List of acronyms and abbreviations, toctitle=List of acronyms and abbreviations, nonumberlist]
+\printglossary
+\end{singlespacing}
 
 \include{01Introduction/introduction}
-\pagebreak
-
-\include{02ProblemFormulation/problemForm}
 \pagebreak
 
 \include{03Methodology/methodology}
@@ -73,6 +142,9 @@ Aalborg University Copenhagen\par
 \include{11Conclusion/conclusion}
 \pagebreak
 
-\printbibliography
+\printbibliography[heading=bibintoc]
+\pagebreak
+
+\include{13Appendix/PlatoonDriverInterview}
 
 \end{document}
